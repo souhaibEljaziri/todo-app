@@ -5,7 +5,7 @@
 <div class="fade-animation" *ngIf="todoList.length > 0; else emptyToDoList">
 
     <!-- Tâches urgentes -->
-    <p *ngIf="this.urgentTaskExists">⚠️ Tâches urgentes</p>
+    <p *ngIf="this.urgentTaskExists">⚠️ Reclamations urgentes</p>
     <ul>
         <ng-container *ngFor="let task of todoList">
             <li *ngIf="task.isUrgent">
@@ -19,7 +19,7 @@
     </ul>
 
     <!-- Tâches non-urgentes -->
-    <p *ngIf="this.nonUrgentTaskExists">🌸 Autres tâches</p>
+    <p *ngIf="this.nonUrgentTaskExists">🌸 Autres recalamations</p>
     <ul>
         <ng-container *ngFor="let task of todoList">
             <li *ngIf="!task.isUrgent">
@@ -37,8 +37,8 @@
 <ng-template #emptyToDoList >
 
     <div class="empty-home">
-        <p>Aucune tâche pour le moment 🙌</p>
-        <a class="blue-button" routerLink="/new-task">Créer une tâche</a>
+        <p>Aucune recalamation pour le moment 🙌</p>
+        <a class="blue-button" routerLink="/new-task">Créer une recalamation</a>
     </div>
 
 </ng-template>
